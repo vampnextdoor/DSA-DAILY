@@ -1,15 +1,14 @@
-class Solution(object):
-    def maxProfit(self, prices):
-        """
-        :type prices: List[int]
-        :rtype: int
-        """
-        profit=0
-        for i in range(1,len(prices)):
-            if prices[i]>prices[i-1]:
-                profit+=prices[i]-prices[i-1]
-        return profit
-        
+def maxProfit(prices):
+    profit=0
+    for i in range(1,len(prices)):
+        if prices[i]>prices[i-1]:
+            profit +=prices[i]-prices[i-1]
+    return profit
+prices = [10,2,3,4,5]
+print("Maximum Profit:", maxProfit(prices))
+
+
+    
 # 122. Best Time to Buy and Sell Stock II
 # Solved
 # Medium
